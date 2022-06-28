@@ -1,0 +1,56 @@
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8">
+    <title>מוצרי פלמינגו</title>
+    <link rel="stylesheet" href="css/product.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  <div class= "container">
+<div class="menu">
+ 
+    <ul>
+     <li class="logo"><img src ="img/flamingo.png"></il>
+	    <a href="index.html" style="text-decoration: none;" target="_self">
+	   <span style="font-size:13pt; color:white;; font-weight:bold;margin: 0 20px;cursor: pointer;white-space: nowrap;">דף הבית</span></a>
+	     <a href="product.html" style="text-decoration: none;" target="_self">
+	   <span style="font-size:13pt; color:white;; font-weight:bold;margin: 0 20px;cursor: pointer;white-space: nowrap;">מוצרים</span></a>
+	        <a href="information.html" style="text-decoration: none;" target="_self">
+	   <span style="font-size:13pt; color:white;; font-weight:bold;margin: 0 20px;cursor: pointer;white-space: nowrap;">קצת עלינו</span></a>
+    <li><a href ="contact.html" class="contact-btn"><span>יצירת קשר</span></a></li>
+   
+    </ul>
+    </div>
+    <div class="product-card">
+      <h1>מוצרים </h1>
+      <p>מוצרי השבוע :</p>
+	  <br>
+      <div class="product-pic"></div>
+      <div class="product-colors">
+	 
+        <span class="blue active" data-color="#7ed6df" data-pic="url(img/animal-2.jpg)"></span>
+        <span class="green" data-color="#badc58" data-pic="url(img/animal-1.jpg)"></span>
+        <span class="yellow" data-color="#f9ca24" data-pic="url(img/animal-3.jpg)"></span>
+        <span class="rose" data-color="#ff7979" data-pic="url(img/animal-4.jpg)"></span>
+		
+      </div>
+	  
+      <div class="product-info">
+        <div class="product-price"> </div>
+        <a href="#" class="product-button">הוסף לסל</a>
+      </div>
+    </div>
+
+    <script>
+      $(".product-colors span").click(function(){
+        $(".product-colors span").removeClass("active");
+        $(this).addClass("active");
+        $("body").css("background",$(this).attr("data-color"));
+        $(".product-price").css("color",$(this).attr("data-color"));
+        $(".product-button").css("color",$(this).attr("data-color"));
+        $(".product-pic").css("background-image",$(this).attr("data-pic"));
+      });
+    </script>
+  </body>
+</html>
